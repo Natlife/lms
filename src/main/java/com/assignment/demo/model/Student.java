@@ -2,7 +2,6 @@ package com.assignment.demo.model;
 
 import jakarta.persistence.*;
 
-import java.lang.Class;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -28,7 +27,7 @@ public class Student {
             joinColumns = @JoinColumn(name = "student_id"),
             inverseJoinColumns = @JoinColumn(name = "class_id")
     )
-    private Set<Class> classes = new HashSet<>();
+    private Set<Classes> classes = new HashSet<>();
 
     @Column(name = "dob")
     private LocalDate dob;

@@ -12,7 +12,7 @@ public class AssignmentDetailDTO {
     private String description;
     private String assignmentType;
     private List<QuestionSubmission> answerList;
-    private String score;
+    private Double score;
     private String review;
     private LocalDateTime modifiedAt;
     private String gradingStatus;
@@ -20,7 +20,7 @@ public class AssignmentDetailDTO {
     public AssignmentDetailDTO() {
     }
 
-    public AssignmentDetailDTO(long scoreReportID, long studentID, String title, String description, String assignmentType, String score, String review, LocalDateTime modifiedAt, String gradingStatus) {
+    public AssignmentDetailDTO(long scoreReportID, long studentID, String title, String description, String assignmentType, Double score, String review, LocalDateTime modifiedAt, String gradingStatus) {
         this.scoreReportID = scoreReportID;
         this.studentID = studentID;
         this.title = title;
@@ -80,11 +80,11 @@ public class AssignmentDetailDTO {
         this.assignmentType = assignmentType;
     }
 
-    public String getScore() {
+    public Double getScore() {
         return score;
     }
 
-    public void setScore(String score) {
+    public void setScore(Double score) {
         this.score = score;
     }
 
